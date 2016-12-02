@@ -19,6 +19,8 @@ ul,p,h1,h2,h3,h4,h5,h6{
     padding:0;
 }
 li{
+    margin:0;
+    padding:0;
     list-style: none;
 }
 a,input,button{
@@ -27,6 +29,8 @@ a,input,button{
 input,button{
     -webkit-apprence:none;
     border-redius:0;
+    border:0;
+    padding: 0;
 }
 input{
     outline:none;
