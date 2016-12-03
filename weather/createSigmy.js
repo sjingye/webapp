@@ -13,7 +13,7 @@ var key = 'iajcksejtks0de76';
 var qsString = `ts=${ts}&ttl=${ttl}&uid=${uid}`;
 var cryptoString = encodeURIComponent(crypto.createHmac("sha1", key).update(qsString).digest('base64'));
 
-// console.log(ts);
+console.log(ts);
 console.log('你生成的签名是：');
 console.log(cryptoString);
 

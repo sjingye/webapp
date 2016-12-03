@@ -1,6 +1,5 @@
 function changeStyle(d) {
     var lis=document.querySelectorAll("section ul li");
-    console.log(d)
     for(var i=0;i<lis.length;i++){
         if(lis[i].innerHTML.indexOf(d) !== -1){
             lis[i].className = "active";
@@ -8,33 +7,57 @@ function changeStyle(d) {
     }
 }
 changeStyle(d);
-$("form input").tap(function () {
+$("section>ul").tap(function (e) {
+    if (e.target.nodeName=== 'LI') {
+        currentCity = e.target.innerHTML;
+        inputHead.val(e.target.innerHTML);
+        console.log(currentCity);
+        getData();
+    }
+})
+var inputHead = $("form input");
+var cityList =  $(".cityList");
+inputHead.tap(function () {
     $("section").hide();
     $(".remind").show();
+    console.log(1)
 })
-
+inputHead.on("change",function () {
+    var t = null;
+    //需要限定输入进来的是汉字才提交
+    if( $(this).val()!== ""){
+        clearTimeout(t);
+        t = setTimeout(function () {
+            var script = document.createElement("script");
+            script.src = 'https://api.thinkpage.cn/v3/location/search.json?ts=1480426837&ttl=3600000&uid=UDA821CDB4&sig=WsJ%2FO4reAerB%2FHmulk0z09sQ6tE%3D&callback=searchCity&q='+inputHead.val();
+            document.body.appendChild(script);
+        },200);
+    }
+    else{
+        cityList.hide();
+    }
+});
 function searchCity(data) {
     if (data.results.length) {
-        cityList.style.display = 'block';
-
+        cityList.show();
+        $(".remind").hide();
+        $("section").hide();
         var citys = data.results;
-
-        var html = '';
+        var str = '';
         citys.forEach(function(city, index) {
-
-            var searchName = cityElement.value;
-            var re = new RegExp(searchName, 'g');
-            var name = city.name.replace(re, function($0) {
-                return '<span style="color: red">'+ $0 +'</span>';
-            });
-
-            var path = city.path.split(',');
-            path.shift();
-            html += `<li _name="${city.name}">${name} - ${path.join(',')}</li>`;
+            str += "<li data-name=city.name>"+city.path+"</li>";
         });
-
-        cityList.innerHTML = html;
+        cityList.html(str);
     } else {
-        cityList.style.display = 'none';
+        cityList.hide();
     }
 }
+cityList.tap(function (e) {
+    if (e.target.nodeName=== 'LI') {
+        currentCity = e.target.getAttribute('data-name');
+        inputHead.val(e.target.getAttribute('data-name'));
+        // cityList.style.display = 'none';
+        getData();
+    }
+})
+//数据请求未完成
