@@ -44,11 +44,12 @@ header {
     [data-dpr="3"] header .prev-month, [data-dpr="3"] header .next-month {
       font-size: 42px; }
   header .prev-month {
-    margin-left: 0.26667rem;
+    margin-left: 0.4rem;
     float: left; }
   header .next-month {
-    margin-right: 0.26667rem;
-    float: right; }
+    margin-right: 0.4rem;
+    float: right;
+    text-align: right; }
   header .choosed-time {
     width: 5rem;
     height: 1.33333rem;
@@ -65,11 +66,11 @@ header {
     [data-dpr="3"] header .choosed-time {
       font-size: 48px; }
   header a {
-    display: inline-block; }
+    display: inline; }
   header .icon-sanjiao {
     position: absolute;
     top: 0.56rem;
-    right: 2.7rem; }
+    right: 2.4rem; }
   [data-dpr="1"] header .icon-sanjiao img {
     height: 16px; }
   [data-dpr="2"] header .icon-sanjiao img {
@@ -79,10 +80,40 @@ header {
 
 .wrap {
   width: 10rem; }
-  .wrap .week {
+  .wrap ul:first-child {
     height: 0.8rem;
     line-height: 0.8rem;
     display: flex;
     align-items: center; }
+    .wrap ul:first-child li {
+      color: #666;
+      flex-grow: 1;
+      text-align: center; }
+      .wrap ul:first-child li.spe {
+        color: #e31b24; }
+  .wrap ul:nth-of-type(2) {
+    height: 8.6rem;
+    display: flex;
+    flex-wrap: wrap; }
+    .wrap ul:nth-of-type(2) li {
+      text-align: center;
+      color: #333;
+      width: 1.2rem;
+      height: 1.2rem;
+      line-height: 1.2rem;
+      margin: 0.11rem;
+      border-radius: 50%; }
+      [data-dpr="1"] .wrap ul:nth-of-type(2) li {
+        font-size: 15px; }
+      [data-dpr="2"] .wrap ul:nth-of-type(2) li {
+        font-size: 30px; }
+      [data-dpr="3"] .wrap ul:nth-of-type(2) li {
+        font-size: 45px; }
+      .wrap ul:nth-of-type(2) li.past {
+        color: #999; }
+      .wrap ul:nth-of-type(2) li.weekend {
+        color: #e31b24; }
+      .wrap ul:nth-of-type(2) li.active {
+        border: 1px solid #e31b24; }
 
 /*# sourceMappingURL=index.css.map */

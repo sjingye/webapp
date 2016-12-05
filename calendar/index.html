@@ -7,6 +7,7 @@
     <script src="../public/zepto/src/zepto.js"></script>
     <script src="../public/zepto/src/event.js"></script>
     <script src="../public/zepto/src/touch.js"></script>
+    <!--<script src="js/jquery-2.2.3.js"></script>-->
     <!--<link rel="stylesheet" href="css/reset.css">-->
     <link rel="stylesheet" href="css/index.css" />
     <title>index</title>
@@ -15,12 +16,6 @@
 <header class="clearfix">
     <a class="prev-month">上月</a>
     <p class="choosed-time">
-        <span>2016</span>
-        年
-        <strong>12</strong>
-        月
-        <em>25</em>
-        日
     </p>
     <a class="icon-sanjiao">
         <img src="img/sanjiao.png">
@@ -29,51 +24,44 @@
 </header>
 <!-- 主体部分 -->
 <div class ="wrap">
-    <ul class="week">
-        <li>日</li>
+    <ul class="week-show">
+        <li class="spe">日</li>
         <li>一</li>
         <li>二</li>
         <li>三</li>
         <li>四</li>
         <li>五</li>
-        <li>六</li>
+        <li class="spe">六</li>
     </ul>
-    <ul class="date">
-       <!-- <li>
-            <p class="past">1</p>
-        </li>
-        <li>
-            <p>2</p>
-        </li>
-        <li>
-            <p>3</p>
-        </li>
-        <li>
-            <p>4</p>
-        </li>
-        <li>
-            <p class="active">1</p>
-        </li>
-        <li>
-            <p>1</p>
-        </li>
-        <li>
-            <p>5</p>
-        </li>-->
+    <ul  class="contain">
+        <!--<li class="past">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li class="active">8</li>
+        <li class="past">9</li>-->
     </ul>
 </div>
  <div class="list">
-     <p>
-         <span>12</span>
-         月
-         <em>5</em>
-         日
-     </p>
-     <strong>星期一</strong>
-     <a href="" class="icon-add"></a>
+     <div>
+         <p>
+             <span>12</span>
+             月
+             <em>5</em>
+             日
+         </p>
+         <strong>星期一</strong>
+         <a href="remark.html" class="icon-add">
+             <img src="img/add.png">
+         </a>
+     </div>
+     <p class="remark"></p>
  </div>
  <div class="today">今天</div>
-<!--<script src="js/index.js"></script>-->
+<script src="js/index.js"></script>
 </div>
 </body>
 </html>
