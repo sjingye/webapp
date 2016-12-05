@@ -1,11 +1,15 @@
 {
   "name": "calendar",
   "version": "1.0.0",
-  "description": "",
+  "description": "nothing",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "sjingye@163.com",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1"
+  }
 }

@@ -2,84 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"   content="width=device-width, maximum-scale=1, user-scalable=no">
-    <script src="../public/lib-flexible-master/build/flexible.js" ></script>
+    <script src="../public/lib-flexible-master/build/flexible_css.debug.js" ></script>
+    <script src="../public/lib-flexible-master/build/flexible.debug.js" ></script>
     <script src="../public/zepto/src/zepto.js"></script>
     <script src="../public/zepto/src/event.js"></script>
     <script src="../public/zepto/src/touch.js"></script>
-    <link rel="stylesheet" href="css/reset.css">
+    <!--<link rel="stylesheet" href="css/reset.css">-->
     <link rel="stylesheet" href="css/index.css" />
     <title>index</title>
 </head>
 <body>
- <!-- 头部-->
-<div class = "top">
-    <div class="top-label">
-        <a class="prev">
-            <img src="img/images/back.png">
-        </a>
-        <h2>选择日期</h2>
-    </div>
-</div>
- <!-- end 头部-->
-
+<header class="clearfix">
+    <a class="prev-month">上月</a>
+    <p class="choosed-time">
+        <span>2016</span>
+        年
+        <strong>12</strong>
+        月
+        <em>25</em>
+        日
+    </p>
+    <a class="icon-sanjiao">
+        <img src="img/sanjiao.png">
+    </a>
+    <a class="next-month">下月</a>
+</header>
 <!-- 主体部分 -->
 <div class ="wrap">
-    <nav>
-        <a class="active">10</a>
-        <a>11</a>
-        <a>12</a>
-    </nav>
-    <div>
-        <ul class="week">
-            <li>日</li>
-            <li>一</li>
-            <li>二</li>
-            <li>三</li>
-            <li>四</li>
-            <li>五</li>
-            <li>六</li>
-        </ul>
-        <ul class="date">
-           <!-- <li>
-                <p class="past">1</p>
-            </li>
-            <li>
-                <p>2</p>
-            </li>
-            <li>
-                <p>3</p>
-            </li>
-            <li>
-                <p>4</p>
-            </li>
-            <li>
-                <p class="active">1</p>
-            </li>
-            <li>
-                <p>1</p>
-            </li>
-            <li>
-                <p>5</p>
-            </li>-->
-        </ul>
-    </div>
-   
-    <p class="choose-date">
-        <strong class="prev-month">10</strong>
-        .
-        <span class="prev-date">17</span>
-        <em>-</em>
-        <strong class="next-month">10</strong>
-        .
-        <span class="next-date">20</span>
-    </p>
-    <p class="total-days">
-        <strong>4</strong>天(
-        <span>3</span>夜)
-    </p>
-    <p class="apply">下单</p>
-<script src="js/index.js"></script>
+    <ul class="week">
+        <li>日</li>
+        <li>一</li>
+        <li>二</li>
+        <li>三</li>
+        <li>四</li>
+        <li>五</li>
+        <li>六</li>
+    </ul>
+    <ul class="date">
+       <!-- <li>
+            <p class="past">1</p>
+        </li>
+        <li>
+            <p>2</p>
+        </li>
+        <li>
+            <p>3</p>
+        </li>
+        <li>
+            <p>4</p>
+        </li>
+        <li>
+            <p class="active">1</p>
+        </li>
+        <li>
+            <p>1</p>
+        </li>
+        <li>
+            <p>5</p>
+        </li>-->
+    </ul>
+</div>
+ <div class="list">
+     <p>
+         <span>12</span>
+         月
+         <em>5</em>
+         日
+     </p>
+     <strong>星期一</strong>
+     <a href="" class="icon-add"></a>
+ </div>
+ <div class="today">今天</div>
+<!--<script src="js/index.js"></script>-->
 </div>
 </body>
 </html>

@@ -2,14 +2,13 @@ html{
     display: block;
     height:100%;
 }
-[data-dpr="1"] body, body{
+body{
     width:10rem;
     font-family: "Helvetica Neue",Helvetica,STHeiTi,sans-serif;
     margin: 0;
-    -webkit-margin:0;
-    background-color: #fff;
-    color: #fff;
-    font-size:12px;
+    background-color:  #FFF;
+    color: #333;
+    font-size: 13px;
     -webkit-text-size-adjust:100%;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
