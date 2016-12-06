@@ -9,6 +9,7 @@
   "author": "sjingye@163.com",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.18.0",
     "browser-sync": "^2.18.2",
     "gulp": "^3.9.1"
   }

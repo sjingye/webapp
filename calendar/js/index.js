@@ -1,3 +1,4 @@
+'use strict';
 let contain = $(".wrap .contain");
 class timePicker{
     constructor(container){
