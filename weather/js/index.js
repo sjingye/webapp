@@ -1,10 +1,10 @@
-/*var weatherData = {
+var weatherData = {
 	"location":{},
 	"now":{},
 	"last_update":"",
 	"daily":[]
-};*/
-      var weatherData = {
+};
+/*      var weatherData = {
            location: {
                "id": "C23NB62W20TF",
                "name": "北京",
@@ -69,7 +69,7 @@
                    "wind_scale": "3"
                }
            ]
-       };
+       };*/
 
     var currentCity="上海";
     var n=0;
@@ -110,7 +110,7 @@
 
 var d=[];
 d.push(weatherData.location.name);
-
+getData();
 renderWeather();
 function renderWeather() {
     $(".city").html(weatherData.location.name);
